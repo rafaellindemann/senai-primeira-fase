@@ -16,9 +16,7 @@ if(placa == 0 || placa == 1){
 }
 
 
-
-
-
+// teste de mesa
 // if(placa == 0 || placa == 1){
     // if(2 == 0 || 2 == 1){
         // if(f || f){
