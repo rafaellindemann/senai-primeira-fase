@@ -17,17 +17,20 @@
 // let nota3 = Number(prompt("3a: "))
 // soma = soma + nota3
 
-// let soma = 0
-// for(let i=0; i<10; i++){
-//     let nota = Number(prompt("Digite a "+ (i+1) + "a nota: "))
-//     soma = soma + nota
-// }
+let soma = 0
+for(let i=0; i<10; i++){
+    let nota = Number(prompt("Digite a "+ (i+1) + "a nota: "))
+    soma = soma + nota
+}
 
-// alert("Soma: " + soma)
+alert("Soma: " + soma)
 
 const nomes = ["Dona Bete", "Mano Juca", "Lúcio Fernando", "Capitão Ganso"]
 
-for(let i=0; i<=4; i++){
+for(let i=0; i<4; i++){
     alert(nomes[i])
+}
+for(let i=1; i<=10; i++){
+    alert(i)
 }
 
