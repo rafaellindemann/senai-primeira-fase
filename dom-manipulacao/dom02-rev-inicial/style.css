@@ -1,5 +1,20 @@
+h1{
+    background-color: blueviolet;
+}
+
+#titulo{
+    background-color: chartreuse;
+    background-color: chocolate;
+}
+
 *{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: brown;
+    color: azure;
+
+    background-color: #333333;
+
+    background-color: rgb(0, 0, 0);
 }
 
 #container{
