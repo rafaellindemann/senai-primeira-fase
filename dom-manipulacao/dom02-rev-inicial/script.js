@@ -4,6 +4,9 @@ function calcularEx1014(){
 
     let consumo = distancia / combustivel
     console.log(consumo);
+
+    // document.getElementById('resultadoConsumo').innerHTML = "O consumo foi de " + consumo + "km/l"
+    document.getElementById('resultadoConsumo').innerHTML = `O consumo foi de ${consumo}km/l`
     
 }
 
@@ -15,3 +18,4 @@ function executarTeste(){
     document.getElementById('resultado').innerHTML += nome    
     
 }
+
