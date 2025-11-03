@@ -1,4 +1,6 @@
 
+// teste crud
+
 // const dinossauro = {
 //     nome: 'Rex',
 //     altura: '6'
