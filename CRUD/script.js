@@ -6,8 +6,8 @@
 //     altura: '6'
 // }
 
-const dinossauros = []
-// let dinossauros = []
+const dinossauros = JSON.parse(localStorage.getItem("dinossauros")) || []
+
 
 // dinossauros.push(dinossauro)
 
@@ -24,6 +24,11 @@ function cadastrarDino(){
     dinossauros.push(dino)
 
     console.log(dinossauros);
+
+    // let dinossaurosTexto = JSON.stringify(dinossauros)
+    // localStorage.setItem("dinossauros", dinossaurosTexto)
+
+    localStorage.setItem("dinossauros", JSON.stringify(dinossauros))
     
     limparForm()
     alert("Dino cadastrado com sucesso!")
