@@ -64,7 +64,6 @@ function mostrarTodosDinos(){
                 <button onclick="editarDino(${dinossauros[i].id})">📝</button>
             </div>
         `
-        
     }
 }
 function editarDino(id){ // selecionarDino seria um nome melhor
