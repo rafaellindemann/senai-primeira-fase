@@ -62,10 +62,30 @@ function mostrarTodosDinos(){
                 <p>Altura: ${dinossauros[i].altura}</p>
                 <p>ID🤫: ${dinossauros[i].id}</p>
                 <button onclick="editarDino(${dinossauros[i].id})">📝</button>
+                <button onclick="deletarDino(${dinossauros[i].id})">🗑️</button>
             </div>
         `
     }
 }
+
+function deletarDino(id){
+    dinossauros = JSON.parse(localStorage.getItem('dinossauros')) || []
+
+    let dinosTemp = dinossauros.filter((d) => d.id != id)
+    localStorage.setItem("dinossauros", JSON.stringify(dinosTemp))
+
+    // for(i=0; i<dinossauros.length; i++){
+    //     if(dinossauros[i].id == id){
+    //         dinossauros.splice(i, 1)
+    //     }
+    // }
+    // localStorage.setItem("dinossauros", JSON.stringify(dinossauros))
+
+
+    mostrarTodosDinos()
+    alert("Deletadinho")
+}
+
 function editarDino(id){ // selecionarDino seria um nome melhor
     console.log(id);
     dinossauros = JSON.parse(localStorage.getItem('dinossauros')) || []
@@ -78,16 +98,17 @@ function editarDino(id){ // selecionarDino seria um nome melhor
             idEditando = dinossauros[i].id
         }
     }
-    
 }
 
 function salvarDino(){
     dinossauros = JSON.parse(localStorage.getItem('dinossauros')) || []
     for(let i=0; i<dinossauros.length; i++){
         if(dinossauros[i].id == idEditando){
+            console.log(i);
+            
             console.log(dinossauros[i]);
             dinossauros[i].nome = document.getElementById('inputNome').value
-            dinossauros[i].altura = document.getElementById('inputAltura').value
+            dinossauros[i].altura = Number(document.getElementById('inputAltura').value)
         }
     }
     localStorage.setItem("dinossauros", JSON.stringify(dinossauros))
